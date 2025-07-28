@@ -14,18 +14,18 @@ class ForecastChart extends StatelessWidget {
         child: Column(
           children: [
             Text('5-Day Forecast',
-                style: Theme.of(context).textTheme.headline6),
+                style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 16),
             SizedBox(
               height: 200,
               child: LineChart(
                 LineChartData(
-                  gridData: FlGridData(show: true),
-                  titlesData: FlTitlesData(show: true),
+                  gridData: const FlGridData(show: true),
+                  titlesData: const FlTitlesData(show: true),
                   borderData: FlBorderData(show: true),
                   lineBarsData: [
                     LineChartBarData(
-                      spots: [
+                      spots: const [
                         FlSpot(0, 20),
                         FlSpot(1, 22),
                         FlSpot(2, 18),
@@ -34,7 +34,7 @@ class ForecastChart extends StatelessWidget {
                       ],
                       isCurved: true,
                       color: Theme.of(context).colorScheme.primary,
-                      dotData: FlDotData(show: true),
+                      dotData: const FlDotData(show: true),
                     ),
                   ],
                 ),

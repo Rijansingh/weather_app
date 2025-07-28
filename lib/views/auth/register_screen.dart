@@ -26,7 +26,8 @@ class RegisterScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Register', style: Theme.of(context).textTheme.headline5),
+                Text('Register',
+                    style: Theme.of(context).textTheme.headlineMedium),
                 const SizedBox(height: 24),
                 CustomTextField(
                   controller: nameController,

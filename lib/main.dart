@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'config/firebase_options.dart';
 import 'routes/app_routes.dart';
 import 'core/themes/theme.dart';
 import 'bindings/initial_bindings.dart';
 
-await dotenv.load(fileName: '.env');
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const WeatherApp());
 }
-
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});

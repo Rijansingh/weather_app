@@ -23,7 +23,8 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Weather App', style: Theme.of(context).textTheme.headline4),
+            Text('Weather App',
+                style: Theme.of(context).textTheme.headlineMedium),
             const SizedBox(height: 24),
             const SpinKitDoubleBounce(
               color: Colors.blueAccent,

@@ -25,7 +25,8 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Login', style: Theme.of(context).textTheme.headline5),
+                Text('Login',
+                    style: Theme.of(context).textTheme.headlineMedium),
                 const SizedBox(height: 24),
                 CustomTextField(
                   controller: emailController,

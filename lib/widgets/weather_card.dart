@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../core/utils/weather_helper.dart';
+import '../core/utils/weather_helper.dart';
 
 class WeatherCard extends StatelessWidget {
   final String city;
@@ -39,15 +39,15 @@ class WeatherCard extends StatelessWidget {
                   children: [
                     Text(
                       city,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                     Text(
                       '$temperature°C',
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headlineMedium,
                     ),
                     Text(
                       condition,
-                      style: Theme.of(context).textTheme.subtitle1,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ],
                 ),
