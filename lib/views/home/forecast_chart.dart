@@ -1,3 +1,4 @@
+// File: lib/views/home/forecast_chart.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -40,7 +41,7 @@ class ForecastChart extends StatelessWidget {
                 height: 200,
                 child: LineChart(
                   LineChartData(
-                    gridData: const FlGridData(show: true),
+                    gridData: FlGridData(show: true),
                     titlesData: FlTitlesData(
                       show: true,
                       bottomTitles: AxisTitles(
@@ -49,7 +50,6 @@ class ForecastChart extends StatelessWidget {
                           getTitlesWidget: (value, meta) {
                             final days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
                             return Text(
-                              // Remove const
                               value.toInt() < days.length
                                   ? days[value.toInt()]
                                   : '',
@@ -61,11 +61,12 @@ class ForecastChart extends StatelessWidget {
                       leftTitles: AxisTitles(
                         sideTitles: SideTitles(
                           showTitles: true,
-                          getTitlesWidget: (value, meta) => Text(
-                            // Remove const
-                            '${value.toInt()}°C',
-                            style: const TextStyle(fontSize: 12),
-                          ),
+                          getTitlesWidget: (value, meta) {
+                            return Text(
+                              '${value.toInt()}°C',
+                              style: const TextStyle(fontSize: 12),
+                            );
+                          },
                           reservedSize: 30,
                         ),
                       ),
